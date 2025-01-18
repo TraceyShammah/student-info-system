@@ -73,39 +73,39 @@ class Course {
     }
 }
 // Example usage
-// create some courses
+
+// Create some courses
 let math101 = new Course(1, "Math 101", 3);
-let sci101 = new Course(2, "Science 101", 4);
+let eco101 = new Course(2, "Economics 101", 4);
 
 // Create users (students and admin)
-let john = new Student("john_doe", "password123");
-let jane = new Student("jane_smith", "password456");
+let tracey = new Student("tracey_shammah", "password123");
+let sasha = new Student("sasha_ephriam", "password456");
 
 let admin = new SystemAdmin("admin_user", "adminpass");
 
 // Students enroll in courses
-john.enroll(math101);
-john.enroll(sci101);
-jane.enroll(sci101);
+tracey.enroll(math101);
+tracey.enroll(eco101);
+sasha.enroll(eco101);
 
 // Admin manages grades for students
-admin.manageGrades(john, math101, "A", "2025-01-18", "Completed");
-admin.manageGrades(jane, sci101, "B", "2025-01-18", "Completed");
+admin.manageGrades(tracey, math101, "A", "2024-03-04", "Completed");
+admin.manageGrades(sasha, eco101, "B", "2024-03-04", "Completed");
 
 // Students can access their information (courses, grades, etc.)
-console.log("John's Information:", john.accessInformation());
-console.log("Jane's Information:", jane.accessInformation());
+console.log("Tracey's Information:", tracey.accessInformation());
+console.log("Sasha's Information:", sasha.accessInformation());
 
 // Check the total number of students
 console.log(Student.getStudentCount());
 
 // Create a new student and enroll them in a course
-let tom = new Student("tom_jones", "password789");
-tom.enroll(math101);
+let precious = new Student("precious_eze", "password789");
+precious.enroll(math101);
 
 // Accessing student's information after enrollment
-console.log("Tom's Information:", tom.accessInformation());
+console.log("Precious's Information:", precious.accessInformation());
 
 // Check updated student count
 console.log(Student.getStudentCount());
-
